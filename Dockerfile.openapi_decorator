@@ -18,7 +18,7 @@ ADD --chown=node:node data /openapi-check/data
 RUN npm ci -D
 
 ENTRYPOINT ["node", "/openapi-check/script/rest/openapi-check.js"]
-FROM node:19-alpine
+FROM node: 19-alpine
 
 RUN apk add --no-cache git python make g++
 
