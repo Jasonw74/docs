@@ -103,3 +103,7 @@ FROM preview as production
 
 # Copy in all translations
 COPY --chown=node:node translations ./translations
+# This Dockerfile is used for docker-based deployments to Azure for both preview environments and production
+
+# --------------------------------------------------------------------------------
+# BASE 
