@@ -29,4 +29,15 @@ RUN chown node:node /openapi-check -R
 USER node
 
 COPY --chown=node:node package.json /openapi-check
-COPY
+COPY FROM node:19-alpine
+
+RUN apk add --no-cache git python make g++
+
+WORKDIR /openapi-check
+
+RUN chown node:node /openapi-check -R
+
+USER node
+
+COPY --chown=node:node package.json /openapi-check
+COPY --cho
